@@ -1,0 +1,12 @@
+package actividades;
+import javax.swing.*;
+
+public class main {
+    public static void main(String[] args) {
+        JFrame ventana = new JFrame("Arbol de Pitagoras");
+        PythagorasTree panel = new PythagorasTree(3);
+        ventana.add(panel);
+        ventana.setSize(800,800);
+        ventana.
+    }
+}
