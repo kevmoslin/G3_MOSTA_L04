@@ -7,6 +7,7 @@ public class main {
         PythagorasTree panel = new PythagorasTree(3);
         ventana.add(panel);
         ventana.setSize(800,800);
-        ventana.
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.setVisible(true);
     }
 }
