@@ -1,6 +1,6 @@
 package actividades;
 import java.awt.*;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class PythagorasTree extends JPanel{
     
@@ -19,7 +19,19 @@ public class PythagorasTree extends JPanel{
         g2d.setColor(Color.GREEN);
         trazarArbol(g2d, 350, 600, 100, -90, profundidad);
     }
+    
+    private void trazarArbol(Graphics2D g, int x, int y, int lado, double angulo, int nivel){
+        if (nivel == 0 || lado <2) {
+            return;
+        }
 
-    
-    
+        int x2 = x + (int) (lado * Math.cos(Math.toRadians(angulo)));
+        int y2 = x + (int) (lado * Math.sin(Math.toRadians(angulo)));
+
+        g.drawLine(x, y, x2, y2);
+
+        int nuevoLado = (int) (lado * 0.7);
+        trazarArbol(g, x2, y2, nuevoLado, angulo-45, nivel-1);
+        trazarArbol(g, x2, y2, nuevoLado, angulo+45, nivel-1);
+    }
 }
