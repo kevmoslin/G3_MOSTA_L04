@@ -5,6 +5,10 @@ public class Hanoi {
         torresHanoi(3,1,2,3);
     }
 
-    public void torresHanoi
-    
+    public void torresHanoi(int discos, int torre1, int torre2, int torre3){
+        if (discos == 1) {
+            
+        }
+    }
+
 }
