@@ -2,8 +2,7 @@ package actividades;
 import java.awt.*;
 import javax.swing.*;
 
-public class PythagorasTree extends JPanel{
-    
+public class PythagorasTree extends JPanel{ 
     private int profundidad;
 
     public PythagorasTree(int profundidad){
