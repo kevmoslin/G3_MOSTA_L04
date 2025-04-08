@@ -1,8 +1,5 @@
 package actividades;
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.*;
 import javax.swing.JPanel;
 
 public class PythagorasTree extends JPanel{
@@ -22,5 +19,7 @@ public class PythagorasTree extends JPanel{
         g2d.setColor(Color.GREEN);
         trazarArbol(g2d, 350, 600, 100, -90, profundidad);
     }
+
+    
     
 }
