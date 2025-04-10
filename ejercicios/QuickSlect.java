@@ -48,4 +48,10 @@ public class QuickSlect {
 
         return almacen;
     }
+
+
+    public static void main(String[] args) {
+        int[] arr1 = {4,2,7,10,4,17};
+        System.out.println(hallarMenor(arr1, 3));
+    }
 }
