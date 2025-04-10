@@ -3,6 +3,11 @@ package ejercicios;
 import java.util.*;
 
 public class QuickSlect {
+    
+    public static int hallarMenor(int[] arr, int k){
+        return quickSelect(arr, 0, arr.length - 1, k -1);
+    }
+    
     private static int quickSelect(int[] arr, int left, int rigth, int k){
         if (left == rigth) {
             return arr[left];
