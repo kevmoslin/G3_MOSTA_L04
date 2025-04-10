@@ -1,5 +1,4 @@
 package ejercicios;
-
 import java.util.*;
 
 public class QuickSlect {
@@ -52,6 +51,10 @@ public class QuickSlect {
 
     public static void main(String[] args) {
         int[] arr1 = {4,2,7,10,4,17};
-        System.out.println(hallarMenor(arr1, 3));
+
+        int k = 3;
+
+        int resultado = hallarMenor(arr1, k);
+        System.out.println("El " + k + "-enesimo numero es " + k);
     }
 }
