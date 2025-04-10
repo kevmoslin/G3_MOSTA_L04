@@ -8,6 +8,10 @@ public class QuickSlect {
             return arr[left];
         }
 
-        Random 
+        Random random = new Random();
+        int pivote = left + random.nextInt(rigth - left + 1);
+        pivote = dividir(arr, left, rigth, pivote);
+
+        
     }
 }
