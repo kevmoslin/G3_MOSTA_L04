@@ -37,6 +37,11 @@ public class SubconjuntoPotenciasRestringidas {
     }
 
     public static boolean verificar(int[] entrada){
-        
+        int n = entrada[0];
+
+        int[] nums = Arrays.copyOfRange(entrada, 1, 1 + n);
+
+        Set<Integer> obligatorios = new HashSet<>();
+        Set<Integer> excluidos = new HashSet<>();
     }
 }
