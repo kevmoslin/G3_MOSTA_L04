@@ -51,6 +51,33 @@ public class SubconjuntoPotenciasRestringidas {
             if (nums[i] % 5 == 0 && i + 1 < nums.length && nums[i + 1] % 2 == 1) {
                 excluidos.add(i);
             }
-        }  
+        }
+
+    int sumaObligatorios = 0;
+    for (int idx : obligatorios) {
+        if (excluidos.contains(idx)) return false; // Conflicto: obligatorio pero excluido
+            sumaObligatorios += nums[idx];
+    }
+
+    int nuevoObjetivo = objetivo - sumaObligatorios;
+    if (nuevoObjetivo < 0) return false;
+
+    Map<String, Boolean> memo = new HashMap<>();
+    return puedeAlcanzarObjetivo(nums, 0, nuevoObjetivo, obligatorios, excluidos, memo);
+    }
+
+    public static void main(String[] args) {
+        int[][] entradas = {
+            {5, 2, 4, 8, 10, 3, 14},  //true
+            {5, 4, 8, 10, 3, 5, 27},    //false
+            {5, 4, 8, 10, 3, 6, 27},   //false
+            {5, 2, 16, 5, 7, 10, 33},   //false
+            {5, 2, 16, 5, 3, 10, 33},   //false
+            {4, 2, 5, 1, 6, 13}        //false
+        };
+
+        for (int[] entrada : entradas) {
+            System.out.println(verificar(entrada));
+        }
     }
 }
