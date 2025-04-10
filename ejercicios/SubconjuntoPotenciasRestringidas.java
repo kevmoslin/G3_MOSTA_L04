@@ -35,4 +35,8 @@ public class SubconjuntoPotenciasRestringidas {
         memo.put(key, resultado);
         return resultado;
     }
+
+    public static boolean verificar(int[] entrada){
+        
+    }
 }
