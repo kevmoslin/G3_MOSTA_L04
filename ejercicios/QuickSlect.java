@@ -55,6 +55,6 @@ public class QuickSlect {
         int k = 3;
 
         int resultado = hallarMenor(arr1, k);
-        System.out.println("El " + k + "-enesimo numero es " + k);
+        System.out.println("El " + k + "-enesimo numero es " + resultado);
     }
 }
