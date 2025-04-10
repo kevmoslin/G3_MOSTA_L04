@@ -19,4 +19,18 @@ public class BinarySearchIterativo {
         }
         return -1;
     }
+
+    public static void main(String[] args) {
+        BinarySearchIterativo ob = new BinarySearchIterativo();
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int n = arr.length;
+        int x = 3;
+        int position = ob.binarySearch(arr, x);
+        if (position == -1){
+            System.out.println("Element not present");
+        } else {
+            System.out.println("Element found at index:" + position);
+        }
+        
+    }
 }
