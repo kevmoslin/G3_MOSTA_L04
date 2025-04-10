@@ -25,7 +25,7 @@ public class PythagorasTree extends JPanel{
         }
 
         int x2 = x + (int) (lado * Math.cos(Math.toRadians(angulo)));
-        int y2 = x + (int) (lado * Math.sin(Math.toRadians(angulo)));
+        int y2 = y + (int) (lado * Math.sin(Math.toRadians(angulo)));
 
         g.drawLine(x, y, x2, y2);
 
