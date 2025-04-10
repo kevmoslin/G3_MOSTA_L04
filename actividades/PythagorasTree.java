@@ -36,7 +36,7 @@ public class PythagorasTree extends JPanel{
 
     public static void main(String[] args) {
         JFrame ventana = new JFrame("Arbol de Pitagoras");
-        PythagorasTree panel = new PythagorasTree(3);
+        PythagorasTree panel = new PythagorasTree(6);
         ventana.add(panel);
         ventana.setSize(800,800);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
