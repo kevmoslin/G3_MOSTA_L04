@@ -12,6 +12,14 @@ public class QuickSlect {
         int pivote = left + random.nextInt(rigth - left + 1);
         pivote = dividir(arr, left, rigth, pivote);
 
-        
+        if (k == pivote) {
+            return arr[k];
+        } else if (k < pivote) {
+            return quickSelect(arr, left, pivote -1, k);
+        } else {
+            return quickSelect(arr, pivote + 1, rigth, k);
+        }
     }
+
+    
 }
