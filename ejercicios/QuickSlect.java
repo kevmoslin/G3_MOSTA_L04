@@ -27,5 +27,20 @@ public class QuickSlect {
         arr[j] = temp;
     }
 
-    
+    private static int dividir(int[] arr, int left, int rigth, int pivote){
+        int valorPivote = arr[pivote];
+        cambio(arr, pivote, rigth);
+        int almacen = left;
+
+        for(int i = left; i < rigth; i++){
+            if (arr[i] < valorPivote) {
+                cambio(arr, almacen, i);
+                almacen++;
+            }
+        }
+
+        cambio(arr, rigth, almacen);
+
+        return almacen;
+    }
 }
