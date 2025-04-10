@@ -1,7 +1,7 @@
 package actividades;
 
 public class Solucion1 {
-    public static int moda1(int array[]){
+    public static int moda1(int array[]){ //O(n²)
         int first = 0;
         int end = array.length-1;
 
@@ -21,7 +21,7 @@ public class Solucion1 {
         return moda;
     }
 
-    private static int frecuencia(int []array, int first, int end, int ele){
+    private static int frecuencia(int []array, int first, int end, int ele){ //O(n)
         if (first > end) return 0;
         int suma = 0;
         for(int i = first; i <= end; i++){
