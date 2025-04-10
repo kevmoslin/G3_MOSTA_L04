@@ -1,7 +1,7 @@
 package ejercicios;
 import java.util.*;
 
-public class QuickSlect {
+public class QuickSelect {
     
     public static int hallarMenor(int[] arr, int k){
         return quickSelect(arr, 0, arr.length - 1, k -1);
