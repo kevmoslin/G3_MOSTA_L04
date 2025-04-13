@@ -9,13 +9,17 @@ public class QuickSelect {
         return quickSelect(arr, 0, arr.length - 1, k -1);
     }
     
+    //Metodo que implementa QuickSelect de forma Recursiva
     private static int quickSelect(int[] arr, int left, int rigth, int k){
+        //caso base
         if (left == rigth) {
             return arr[left];
         }
 
+        //seleccion de pivote aleatorio
         Random random = new Random();
         int pivote = left + random.nextInt(rigth - left + 1);
+        //Reorganiza el arreglo 
         pivote = dividir(arr, left, rigth, pivote);
 
         if (k == pivote) {
