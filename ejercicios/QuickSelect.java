@@ -22,6 +22,7 @@ public class QuickSelect {
         //Reorganiza el arreglo 
         pivote = dividir(arr, left, rigth, pivote);
 
+        //casos para encontrar el numero
         if (k == pivote) {
             return arr[k];
         } else if (k < pivote) {
@@ -31,12 +32,14 @@ public class QuickSelect {
         }
     }
 
+    //Metodo pa intercambiar posiciones
     private static void cambio(int[] arr, int i, int j){
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
+    // Método que organiza los elementos del arreglo alrededor del pivote
     private static int dividir(int[] arr, int left, int rigth, int pivote){
         int valorPivote = arr[pivote];
         cambio(arr, pivote, rigth);
