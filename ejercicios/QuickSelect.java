@@ -3,7 +3,9 @@ import java.util.*;
 
 public class QuickSelect {
     
+    //Metodo principal qu encuentra el k-esimo numero
     public static int hallarMenor(int[] arr, int k){
+        //Ajusta k a indice de arreglo este empieza desde 0
         return quickSelect(arr, 0, arr.length - 1, k -1);
     }
     
