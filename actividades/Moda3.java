@@ -1,7 +1,7 @@
+package actividades;
 import java.util.*;
 
 public class Moda3 {
-
     static class Limits {
         int[] a;
         int prim, ult;
