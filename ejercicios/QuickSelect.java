@@ -42,9 +42,11 @@ public class QuickSelect {
     // Método que organiza los elementos del arreglo alrededor del pivote
     private static int dividir(int[] arr, int left, int rigth, int pivote){
         int valorPivote = arr[pivote];
+        // Mueve el pivote al final
         cambio(arr, pivote, rigth);
         int almacen = left;
 
+         // Recorre los elementos, colocando los menores al pivote a la izquierda
         for(int i = left; i < rigth; i++){
             if (arr[i] < valorPivote) {
                 cambio(arr, almacen, i);
@@ -52,6 +54,7 @@ public class QuickSelect {
             }
         }
 
+        // Coloca el pivote en su posición final
         cambio(arr, rigth, almacen);
 
         return almacen;
